@@ -36,7 +36,7 @@
                     <li class="nav-item"><a class="nav-link" href="">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="Matches.php">Matches</a></li>
                     <li class="nav-item"><a class="nav-link" href="Tickets.php">Ticket</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="store.php">Store</a></li>
                     <?php
                         if (isset($_SESSION["fanid"])){
                             echo '<li class="nav-item"><a class="nav-link" href="profile.php">Profile</a></li>';
