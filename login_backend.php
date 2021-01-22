@@ -3,7 +3,7 @@
 	include "function.php";
 
 	if (isset($_POST['login'])) {
-		$userid = $_POST['userid'];
+		$email = $_POST['email'];
 		$password = $_POST['password'];
 	}
 
@@ -11,14 +11,14 @@
 		header("location: login.php");
 	}
   
-	$useridexist = userIDexist($connected, $userid);
+	$emailexist = emailexist($connected, $email);
 //user id check if exist or not
-	if ($useridexist == false) {
-		header("location: login.php?error=useridexist");
+	if ($emailexist == false) {
+		header("location: login.php?error=emailexist");
  		exit();
 	}
 
-	$hashedpassword = $useridexist["password"];
+	$hashedpassword = $emailexist["password"];
 	$checkpassword = password_verify($password, $hashedpassword);
 
 	if ($checkpassword == false) {
@@ -27,8 +27,8 @@
 	}
 	else if ($checkpassword == true) {
 		session_start();
-		$_SESSION["fanid"] = $useridexist["fan_id"];
-		$_SESSION["fanname"] = $useridexist["name"];
+		$_SESSION["email"] = $emailexist["email"];
+		$_SESSION["name"] = $useridexist["name"];
 		header("location: index.php");
  		exit();
 	}

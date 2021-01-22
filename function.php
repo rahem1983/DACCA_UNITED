@@ -12,14 +12,14 @@ function passwardMatch($password, $repeat_password) {
 	return $result;
 }
 
-function userIDexist($connection, $userid) {
-	$sql = 'SELECT * FROM fans WHERE fan_id = ?;';
+function emailexist($connection, $email) {
+	$sql = 'SELECT * FROM user WHERE email = ?;';
 	$stmt = mysqli_stmt_init($connection);
 	if (!mysqli_stmt_prepare($stmt,$sql)) {
 		header("location: signup.php?error=stmtfailed01 ");
  		exit();
 	}
-	mysqli_stmt_bind_param($stmt, "i" , $userid);
+	mysqli_stmt_bind_param($stmt, "s" , $email);
 	mysqli_stmt_execute($stmt);
 
 	$resultdata = mysqli_stmt_get_result($stmt);

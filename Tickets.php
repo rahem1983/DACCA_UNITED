@@ -1,5 +1,5 @@
 <?php 
-    include 'header.php';
+    include ('header.php');
  ?>
  <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +49,7 @@
                     <td>Bangladesh Premier League</td>
                     <td>Dacca United Vs Bashundhara Kings</td>
                     <td class="float-right">
-                        <a class="btn btn-outline-warning" href="">Buy Ticket</a>
+                        <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
                     </td>
 
             </tr>
@@ -58,7 +58,7 @@
                 <td>Federation Cup</td>
                 <td>Brothers Union Vs Dacca United</td>
                 <td class="float-right">
-                  <a class="btn btn-outline-warning" href="">Buy Ticket</a>
+                  <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
                 </td>
 
         </tr>
@@ -67,7 +67,7 @@
             <td>Bangladesh Premier League</td>
             <td>Dacca United Vs Sheikh Jamal</td>
             <td class="float-right">
-                <a class="btn btn-outline-warning" href="">Buy Ticket</a>
+                <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
             </td>
 
         </tr>
@@ -76,7 +76,7 @@
             <td>Federation Cup</td>
             <td>Abahani Vs Dacca United</td>
             <td class="float-right">
-            <a class="btn btn-outline-warning" href="">Buy Ticket</a>
+            <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
         </td>
 
     </tr>
@@ -85,7 +85,7 @@
         <td>Bangladesh Premier League</td>
         <td>Dacca United Vs Saif Sporting Club</td>
         <td class="float-right">
-        <a class="btn btn-outline-warning" href="">Buy Ticket</a>
+        <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
     </td>
 
 </tr> 

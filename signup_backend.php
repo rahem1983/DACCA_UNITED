@@ -9,7 +9,7 @@ if (isset($_POST['signup'])) {
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$phone = $_POST['phone'];
-		$userid = $_POST['userid'];
+		// $userid = $_POST['userid'];
 		$password = $_POST['password'];
 		$repeat_password = $_POST['repeat_password'];
 	}
@@ -27,15 +27,15 @@ else{
 
 
 //checking username exist or not error-->
- if (userIDexist($connected, $userid) !== false) {
+ if (emailexist($connected, $email) !== false) {
 
- 		header("location: signup.php?error=userIDexist");
+ 		header("location: signup.php?error=emailexist");
  		exit();
  	 }
 
 
 
-$sql = "INSERT INTO fans (fan_id, name, password, email, phone) VALUES (?, ?, ?, ?, ?);";
+$sql = "INSERT INTO user (email, name, password, phone) VALUES (?, ?, ?, ?);";
 
 $stmt = mysqli_stmt_init($connected);
 
@@ -59,7 +59,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
 
 $hashedpass = password_hash($password, PASSWORD_DEFAULT);
  
-mysqli_stmt_bind_param($stmt, "isssi", $userid, $name, $hashedpass, $email, $phone); 
+mysqli_stmt_bind_param($stmt, "ssss",$email, $name, $hashedpass,  $phone); 
 mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 

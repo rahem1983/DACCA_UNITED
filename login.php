@@ -54,9 +54,9 @@
                        
                        <div class="form-group pb-4">
                             
-                            <input type="text" class="form-control" name="userid" placeholder="Fan ID" >
+                            <input type="text" class="form-control" name="email" placeholder="email" >
                             <!-- <div class="valid-feedback">Valid</div> -->
-                           	<div class="invalid-feedback">Please Enter an fan id</div>
+                           	<div class="invalid-feedback">Please Enter an email</div>
                         </div>
         
                         <div class="form-group pb-4">
@@ -74,8 +74,8 @@
                     <div class="text-center pt-5 text-danger ">
                         <h2><?php 
                             if (isset($_GET["error"])) {
-                                if ($_GET["error"]== "useridexist") {
-                                    echo 'Fan id does not exist!!!';
+                                if ($_GET["error"]== "emailexist") {
+                                    echo 'Email does not exist!!!';
                                 }
                                 elseif ($_GET["error"]== "wrongpassword") {
                                     echo 'Passward does not match!!!';

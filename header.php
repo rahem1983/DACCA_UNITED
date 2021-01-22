@@ -1,6 +1,7 @@
 <?php 
     session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +39,7 @@
                     <li class="nav-item"><a class="nav-link" href="Tickets.php">Ticket</a></li>
                     <li class="nav-item"><a class="nav-link" href="store.php">Store</a></li>
                     <?php
-                        if (isset($_SESSION["fanid"])){
+                        if (isset($_SESSION["email"])){     
                             echo '<li class="nav-item"><a class="nav-link" href="profile.php">Profile</a></li>';
                             echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
                         }

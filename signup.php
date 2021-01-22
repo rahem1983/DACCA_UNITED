@@ -46,12 +46,12 @@ body{
                     <div class="invalid-feedback"><h6 class="font-weight bolder">Please Enter your email</h6></div>
                 </div>
                
-               <div class="form-group pb-4">
+               <!-- <div class="form-group pb-4">
                     
                     <input type="text" class="form-control" name="userid" placeholder="Fan ID" required>
                     <div class="valid-feedback"><h6 class="font-weight bolder">Valid</h6></div>
                     <div class="invalid-feedback"><h6 class="font-weight bolder">Please Enter an fan id</h6></div>
-                </div>
+                </div> -->
 
                 <div class="form-group pb-4">
                     
@@ -62,7 +62,7 @@ body{
                 
                 <div class="form-group pb-4">
                     
-                    <input type="password" class="form-control" name="repeat_password" placeholder="repeat_password" required>
+                    <input type="password" class="form-control" name="repeat_password" placeholder="confirm password" required>
                     <div class="valid-feedback"><h6 class="font-weight bolder">Valid</h6></div>
                     <div class="invalid-feedback"><h6 class="font-weight bolder">Please Enter the password again</h6></div>
                 </div>
@@ -82,7 +82,7 @@ body{
                         if ($_GET["error"]== "passwardMissMatch") {
                             echo 'Passward does not match!!!';
                         }
-                        elseif ($_GET["error"]== "userIDexist") {
+                        elseif ($_GET["error"]== "emailexist") {
                             echo 'Fan id allready exist!!!';
                         }
                     }
@@ -91,9 +91,7 @@ body{
             </div>
            
     </div>
-    <?php 
-        include 'footer.php';
-     ?>    
+       
     
     
 
@@ -102,3 +100,7 @@ body{
 
 </body>
 </html>
+
+<?php 
+        include 'footer.php';
+     ?> 

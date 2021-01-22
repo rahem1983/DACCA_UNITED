@@ -17,9 +17,10 @@
 </head>
 <body>
     
+
     <div class="team-table my-5">
         <div class="title text-center mb-3">
-            <h1 class= "py-3 font-weight bolder">Store</h1>
+            <h1 class= "py-3 font-weight border">Store</h1>
         </div>
 
          <!--Card-->
@@ -34,7 +35,7 @@
                                 <h4 class="card-title">Home Kit Full Sleeve Maroon</h4>
                                 <h5 class="card-title">Product ID: 1001</h5>
                                 <h5 class="card-title">Price: ৳ 9000  </h5>
-                                <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                                <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                             </div>
                     </div>
              </div>
@@ -47,7 +48,7 @@
                         <h4 class="card-title">Away Kit Full Sleeve Teal</h4>
                         <h5 class="card-title">Product ID: 1002</h5>
                         <h5 class="card-title">Price: ৳ 7000  </h5>
-                        <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                        <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                     </div>
             </div>
      </div>
@@ -59,7 +60,7 @@
                     <h4 class="card-title">Third Kit Full Sleeve Black</h4>
                     <h5 class="card-title">Product ID: 1003</h5>
                     <h5 class="card-title">Price: ৳ 12000  </h5>
-                    <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                    <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                 </div>
         </div>
     </div>
@@ -74,7 +75,7 @@
                                 <h4 class="card-title">Home Kit Full Sleeve Maroon</h4>
                                 <h5 class="card-title">Product ID: 1004</h5>
                                 <h5 class="card-title">Price: ৳ 8000  </h5>
-                                <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                                <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                             </div>
                     </div>
              </div>
@@ -87,7 +88,7 @@
                         <h4 class="card-title">Away Kit Full Sleeve Teal</h4>
                         <h5 class="card-title">Product ID: 1005</h5>
                         <h5 class="card-title">Price: ৳ 6000  </h5>
-                        <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                        <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                     </div>
             </div>
      </div>
@@ -99,7 +100,7 @@
                     <h4 class="card-title">Third Kit Half Sleeve Black</h4>
                     <h5 class="card-title">Product ID: 1006</h5>
                     <h5 class="card-title">Price: ৳ 4000  </h5>
-                    <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                    <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                 </div>
         </div>
     </div>
@@ -114,7 +115,7 @@
                                 <h4 class="card-title">Dacca United Mask Maroon</h4>
                                 <h5 class="card-title">Product ID: 2001</h5>
                                 <h5 class="card-title">Price: ৳ 700  </h5>
-                                <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                                <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                             </div>
                     </div>
              </div>
@@ -127,7 +128,7 @@
                         <h4 class="card-title">Dacca United Mask Teal</h4>
                         <h5 class="card-title">Product ID: 2002</h5>
                         <h5 class="card-title">Price: ৳ 500  </h5>
-                        <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                        <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                     </div>
             </div>
      </div>
@@ -139,7 +140,7 @@
                     <h4 class="card-title">Dacca United Mask Black</h4>
                     <h5 class="card-title">Product ID: 2003</h5>
                     <h5 class="card-title">Price: ৳ 400  </h5>
-                    <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                    <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                 </div>
         </div>
     </div>
@@ -154,7 +155,7 @@
                                 <h4 class="card-title">Dacca United Maroon Boots</h4>
                                 <h5 class="card-title">Product ID: 3001</h5>
                                 <h5 class="card-title">Price: ৳ 9000  </h5>
-                                <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                                <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                             </div>
                     </div>
              </div>
@@ -167,7 +168,7 @@
                         <h4 class="card-title">Dacca United Teal Boots</h4>
                         <h5 class="card-title">Product ID: 3002</h5>
                         <h5 class="card-title">Price: ৳ 7000  </h5>
-                        <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                        <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                     </div>
             </div>
      </div>
@@ -179,7 +180,7 @@
                     <h4 class="card-title">Dacca United Black Boots</h4>
                     <h5 class="card-title">Product ID: 3003</h5>
                     <h5 class="card-title">Price: ৳ 5000  </h5>
-                    <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                    <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                 </div>
         </div>
     </div>
@@ -195,7 +196,7 @@
                                 <h4 class="card-title">Dacca United Red Football</h4>
                                 <h5 class="card-title">Product ID: 4001</h5>
                                 <h5 class="card-title">Price: ৳ 8000  </h5>
-                                <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                                <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                             </div>
                     </div>
              </div>
@@ -208,7 +209,7 @@
                         <h4 class="card-title">Dacca United Teal Football</h4>
                         <h5 class="card-title">Product ID: 4002</h5>
                         <h5 class="card-title">Price: ৳ 6000  </h5>
-                        <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                        <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                     </div>
             </div>
      </div>
@@ -220,7 +221,7 @@
                     <h4 class="card-title">Dacca United Black Football</h4>
                     <h5 class="card-title">Product ID: 4003</h5>
                     <h5 class="card-title">Price: ৳ 5000  </h5>
-                    <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                    <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                 </div>
         </div>
     </div>
@@ -236,7 +237,7 @@
                                 <h4 class="card-title">Dacca United Maroon Socks</h4>
                                 <h5 class="card-title">Product ID: 5001</h5>
                                 <h5 class="card-title">Price: ৳ 3000  </h5>
-                                <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                                <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                             </div>
                     </div>
              </div>
@@ -249,7 +250,7 @@
                         <h4 class="card-title">Dacca United Teal Socks</h4>
                         <h5 class="card-title">Product ID: 5002</h5>
                         <h5 class="card-title">Price: ৳ 2000  </h5>
-                        <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                        <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                     </div>
             </div>
      </div>
@@ -261,7 +262,7 @@
                     <h4 class="card-title">Dacca United Black Socks</h4>
                     <h5 class="card-title">Product ID: 5003</h5>
                     <h5 class="card-title">Price: ৳ 1000  </h5>
-                    <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                    <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                 </div>
         </div>
     </div>
@@ -276,7 +277,7 @@
                                 <h4 class="card-title">Dacca United Red Gloves</h4>
                                 <h5 class="card-title">Product ID: 6001</h5>
                                 <h5 class="card-title">Price: ৳ 4000  </h5>
-                                <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                                <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                             </div>
                     </div>
              </div>
@@ -289,7 +290,7 @@
                         <h4 class="card-title">Dacca United Green Gloves</h4>
                         <h5 class="card-title">Product ID: 6002</h5>
                         <h5 class="card-title">Price: ৳ 3000  </h5>
-                        <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                        <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                     </div>
             </div>
      </div>
@@ -301,7 +302,7 @@
                     <h4 class="card-title">Dacca United Black Gloves</h4>
                     <h5 class="card-title">Product ID: 6003</h5>
                     <h5 class="card-title">Price: ৳ 2000  </h5>
-                    <div class= "text-center pt-2"><a href=""><button type="button" class="btn btn-warning">Buy Now</button></a></div>
+                    <div class= "text-center pt-2"><a href="storeform.php"><button type="button" class="btn btn-warning">Buy Now</button></a></div>
                 </div>
         </div>
     </div>
