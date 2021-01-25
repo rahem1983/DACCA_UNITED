@@ -33,9 +33,9 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team-card.php">Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Matches.php">Matches</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Matches.php">Match</a></li>
                     <li class="nav-item"><a class="nav-link" href="Tickets.php">Ticket</a></li>
                     <li class="nav-item"><a class="nav-link" href="store.php">Store</a></li>
                     <?php

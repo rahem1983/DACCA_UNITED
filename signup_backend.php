@@ -2,8 +2,6 @@
 	include "DB_connection.php";
 	include "function.php";
 
-
-
 //checking the inputs and save to variable-->
 if (isset($_POST['signup'])) {
 		$name = $_POST['name'];

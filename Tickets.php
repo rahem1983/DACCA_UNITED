@@ -1,5 +1,6 @@
 <?php 
     include ('header.php');
+    require ('DB_connection.php');
  ?>
  <!DOCTYPE html>
 <html lang="en">
@@ -44,57 +45,34 @@
         </tr>
     </thead>
     <tbody>
-            <tr>
-                    <td>26 January, 2021</td>
-                    <td>Bangladesh Premier League</td>
-                    <td>Dacca United Vs Bashundhara Kings</td>
-                    <td class="float-right">
-                        <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
-                    </td>
+        <?php
+                    $sql= 'SELECT * FROM ticket INNER JOIN matches where (CURRENT_DATE < matches.date and hometeam = "Dacca United")';
+                    $result = mysqli_query($connected, $sql); 
 
-            </tr>
-            <tr>
-                <td>29 January, 2021</td>
-                <td>Federation Cup</td>
-                <td>Brothers Union Vs Dacca United</td>
-                <td class="float-right">
-                  <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
-                </td>
+                        while ($ticket = mysqli_fetch_array($result)) {?>
+                        <tr>
+                                <td><?php echo "$ticket[date]"; ?></td>
+                                <td><?php echo "$ticket[competition]";?></td>
+                                <td><?php echo "$ticket[hometeam]", " vs ", "$ticket[awayteam]";?></td>
+                                <td class="float-right">
+                                
+                                </td>
 
-        </tr>
-        <tr>
-            <td>31 January, 2021</td>
-            <td>Bangladesh Premier League</td>
-            <td>Dacca United Vs Sheikh Jamal</td>
-            <td class="float-right">
-                <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
-            </td>
-
-        </tr>
-        <tr>
-            <td>3 February, 2021</td>
-            <td>Federation Cup</td>
-            <td>Abahani Vs Dacca United</td>
-            <td class="float-right">
-            <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
-        </td>
-
-    </tr>
-    <tr>
-        <td>6 February, 2021</td>
-        <td>Bangladesh Premier League</td>
-        <td>Dacca United Vs Saif Sporting Club</td>
-        <td class="float-right">
-        <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
-    </td>
-
-</tr> 
-      
-
-
+                            </tr>
+                    <?php 
+                    }
+                    
+                ?>  
     </tbody>
 </table>
+<div class="container-fluid bg-dark text-center">
+        <div class="bg-dark">
+            <div class="row pb-5" class="bg-dark">
+                <div class="col-lg-12"><a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a></div>
 
+
+    </div>
+</div>
 
 </div>
 

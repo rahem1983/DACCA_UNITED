@@ -1,6 +1,6 @@
 <?php 
     include 'header.php';
-    include 'DB_connection.php';
+    require ('DB_connection.php');
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,62 +31,34 @@
         <h1 class= "font-weight bolder py-4"> Match Fixtures</h1>
     </div>
 
-<table class="table table-bordered text-center text-white">
+<table class="table table-bordered border-warning text-center text-white">
     <thead class="thead">
         <tr>
 
             <th>Date</th>
             <th>Competetion</th>
             <th>Home Vs Away</th>
-            <th>Ticket</th>  
+              
         </tr>
     </thead>
     <tbody>
-            <tr>
-                    <td>26 January, 2021</td>
-                    <td>Bangladesh Premier League</td>
-                    <td>Dacca United Vs Bashundhara Kings</td>
-                    <td class="float-right">
-                        <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
-                    </td>
+            <?php
+                    $sql= 'SELECT * FROM matches where (current_date < date) ORDER BY date;';
+                    $result = mysqli_query($connected, $sql);
+                    $count = 0;
 
-            </tr>
-            <tr>
-                <td>29 January, 2021</td>
-                <td>Federation Cup</td>
-                <td>Brothers Union Vs Dacca United</td>
-                <td class="float-right">
-                  <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
-                </td>
-
-        </tr>
-        <tr>
-            <td>31 January, 2021</td>
-            <td>Bangladesh Premier League</td>
-            <td>Dacca United Vs Sheikh Jamal</td>
-            <td class="float-right">
-                <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
-            </td>
-
-        </tr>
-        <tr>
-            <td>3 February, 2021</td>
-            <td>Federation Cup</td>
-            <td>Abahani Vs Dacca United</td>
-            <td class="float-right">
-            <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
-        </td>
-
-    </tr>
-    <tr>
-        <td>6 February, 2021</td>
-        <td>Bangladesh Premier League</td>
-        <td>Dacca United Vs Saif Sporting Club</td>
-        <td class="float-right">
-        <a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a>
-    </td>
-
-</tr> 
+                        while ($matches = mysqli_fetch_array($result) and $count < 10) {?>
+                        <tr>
+                                <td class="p-3 "><?php echo "$matches[date]"; ?></td>
+                                <td class="p-3"><?php echo "$matches[competition]";?></td>
+                                <td class="p-3"><?php echo "$matches[hometeam]", " vs ", "$matches[awayteam]";?></td>    
+                                <?php $count++; ?>
+                            </tr>
+                    <?php 
+                    }
+                    
+                ?>
+        
       
 
 
@@ -112,47 +84,28 @@
             <th>Result</th>  
         </tr>
     </thead>
+
+
     <tbody>
-                 <tr>
-                    <td>1 January, 2021</td>
-                    <td>Bangladesh Premier League</td>
-                    <td> Muktijoddha Sangsad KC Vs Dacca United</td>
-                    <td class="text-success">0-4 (W)</td>
-
-                 </tr>
-            <tr>
-                    <td>4 January, 2021</td>
-                    <td>AFC Cup</td>
-                    <td>Dacca United Vs Ulsan Hyundai</td>
-                    <td class="text-success">2-0 (W)</td>
-
-            </tr>
-            <tr>
-                <td>10 January, 2021</td>
-                <td>Federation Cup</td>
-                <td> Mohammedan Vs Dacca United</td>
-                <td class="text-warning">1-1 (D)</td>
-    
-        </tr>
-            <tr>
-                <td>16 January, 2021</td>
-                <td>Bangladesh Premier League</td>
-                <td>Sheikh Russel KC Vs Dacca United</td>
-                <td class="text-danger">3-2 (L)</td>
-
-        </tr>
-        <tr>
-            <td>22 January, 2021</td>
-            <td>Bangladesh Premier League</td>
-            <td>Dacca United Vs Rahmatganj FC</td>
-            <td class="text-success">7-0 (W)</td>
-
-    </tr>
-        
-      
-      
-
-
+            <?php
+                    $sql= "SELECT * FROM matchresult,matches WHERE matchresult.MatchID = matches.MatchID ORDER BY date;";
+                    $result = mysqli_query($connected, $sql);
+                     gettype($result);
+                        while ($matches = mysqli_fetch_array($result) ) {?>
+                        <tr>
+                                <td class="p-3 "><?php echo "$matches[date]"; ?></td>
+                                <td class="p-3"><?php echo "$matches[competition]";?></td>
+                                <td class="p-3"><?php echo "$matches[hometeam]", " vs ", "$matches[awayteam]";?></td>
+                                <?php if ($matches[DaccaUnited] == $matches[opponent]) { ?>
+                                    <td class="p-3 text-success"><?php echo "$matches[DaccaUnited]", " - ", "$matches[opponent]";?></td>
+                                <?php } ?>
+                                <td class="p-3"><?php echo "$matches[DaccaUnited]", " - ", "$matches[opponent]";?></td>    
+                            </tr>
+                    <?php 
+                    }
+                    
+                ?>
+       
     </tbody>
 </table>
 </div>

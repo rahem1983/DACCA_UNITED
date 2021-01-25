@@ -20,7 +20,7 @@
  <div>
  	<h1>
  		<?php
- 		$sql= 'SELECT * FROM fans;';
+ 		$sql= 'SELECT * FROM user;';
 	$result = mysqli_query($connected, $sql);
 	$fans = mysqli_fetch_all($result, MYSQLI_ASSOC);
 	 foreach ($fans as $emple) { ?>
@@ -36,21 +36,30 @@
 
             <th>name</th>
             <th>email</th>
-            <th>Home Vs Away</th>
-            <th>Ticket</th>  
+            <!-- <th>Home Vs Away</th>
+            <th>Ticket</th> -->  
         </tr>
     </thead>
     <tbody>
-            <tr>
-                    <td>26 January, 2021</td>
-                    <td>Bangladesh Premier League</td>
-                    <td>Dacca United Vs Bashundhara Kings</td>
-                    <td class="float-right">
-                        <a class="btn btn-outline-warning" href="">Buy Ticket</a>
-                    </td>
+            
+                <?php
+                    $sql= 'SELECT * FROM user;';
+                    $result = mysqli_query($connected, $sql);
+                    
+                    while ($fans = mysqli_fetch_assoc($result)) {?>
+                        <tr>
+                                <td><?php echo "$fans[name]"; ?></td>
+                                <td><?php echo "$fans[email]";?></td>
+                                <td class="float-right">
+                                <a class="btn btn-outline-warning" href="">Buy Ticket</a>
+                                </td>
 
-            </tr>
-            <tr>
+                            </tr>
+                    <?php }
+                ?>
+
+            
+           <!--  <tr>
                 <td>29 January, 2021</td>
                 <td>Federation Cup</td>
                 <td>Brothers Union Vs Dacca United</td>
@@ -85,7 +94,7 @@
         <a class="btn btn-outline-warning" href="">Buy Ticket</a>
     </td>
 
-	</tr> 
+	</tr> --> 
     </tbody>
 </table>
 </div>
