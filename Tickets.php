@@ -26,8 +26,8 @@
         <div class="bg-dark">
             <div class="row pb-5" class="bg-dark">
 
-    </div>
-</div>
+            </div>
+        </div>
    <!--Team Table-->
    <div class="team-table my-5 bg-dark text-warning my-1 ">
     <div class="title text-center mb-1">
@@ -38,25 +38,23 @@
     <thead class="thead">
         <tr>
 
-            <th>Date</th>
+            <th>Match Number</th>
             <th>Competetion</th>
             <th>Home Vs Away</th>
-            <th>Ticket</th>  
+            <th>Date</th>  
         </tr>
     </thead>
     <tbody>
         <?php
-                    $sql= 'SELECT * FROM ticket INNER JOIN matches where (CURRENT_DATE < matches.date and hometeam = "Dacca United")';
+                    $sql= 'SELECT * FROM ticket INNER JOIN matches where (CURRENT_DATE < matches.date and hometeam = "Dacca United") ORDER BY matches.date';
                     $result = mysqli_query($connected, $sql); 
 
                         while ($ticket = mysqli_fetch_array($result)) {?>
                         <tr>
-                                <td><?php echo "$ticket[date]"; ?></td>
-                                <td><?php echo "$ticket[competition]";?></td>
-                                <td><?php echo "$ticket[hometeam]", " vs ", "$ticket[awayteam]";?></td>
-                                <td class="float-right">
-                                
-                                </td>
+                                <td class="p-3"><?php echo "$ticket[MatchID]"; ?></td>
+                                <td class="p-3"><?php echo "$ticket[competition]";?></td>
+                                <td class="p-3"><?php echo "$ticket[hometeam]", " vs ", "$ticket[awayteam]";?></td>
+                                <td class="p-3"><?php echo "$ticket[date]"; ?></td>
 
                             </tr>
                     <?php 
@@ -67,15 +65,15 @@
 </table>
 <div class="container-fluid bg-dark text-center">
         <div class="bg-dark">
-            <div class="row pb-5" class="bg-dark">
-                <div class="col-lg-12"><a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a></div>
+            <div class="row pb-5 pt-3" class="bg-dark">
+                <div class="col-lg-12 font-weight bolder"><a class="btn btn-outline-warning" href="TicketForm.php">Buy Ticket</a></div>
 
+
+            </div>
+        </div>
 
     </div>
 </div>
-
-</div>
-
     <div class="container-fluid bg-dark ">
         <div class="bg-dark">
             <div class="row pb-5" class="bg-dark">

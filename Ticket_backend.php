@@ -4,6 +4,7 @@
 
 //checking the inputs and save to variable-->
 if (isset($_POST['buynow'])) {
+		$matchid = $_POST['matchid']
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$phone = $_POST['phone'];

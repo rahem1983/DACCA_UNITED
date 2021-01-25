@@ -43,16 +43,14 @@
     </thead>
     <tbody>
             <?php
-                    $sql= 'SELECT * FROM matches where (current_date < date) ORDER BY date;';
+                    $sql= 'SELECT * FROM matches where (current_date < date) ORDER BY date LIMIT 10;';
                     $result = mysqli_query($connected, $sql);
-                    $count = 0;
 
-                        while ($matches = mysqli_fetch_array($result) and $count < 10) {?>
+                        while ($matches = mysqli_fetch_array($result)) {?>
                         <tr>
                                 <td class="p-3 "><?php echo "$matches[date]"; ?></td>
                                 <td class="p-3"><?php echo "$matches[competition]";?></td>
                                 <td class="p-3"><?php echo "$matches[hometeam]", " vs ", "$matches[awayteam]";?></td>    
-                                <?php $count++; ?>
                             </tr>
                     <?php 
                     }
@@ -74,7 +72,7 @@
         <h1 class= "font-weight bolder py-5"> Match Results</h1>
     </div>
 
-<table class="table table-bordered text-center text-white">
+<table class="table table-bordered border-warning text-center text-white">
     <thead class="thead">
         <tr>
 
@@ -96,10 +94,19 @@
                                 <td class="p-3 "><?php echo "$matches[date]"; ?></td>
                                 <td class="p-3"><?php echo "$matches[competition]";?></td>
                                 <td class="p-3"><?php echo "$matches[hometeam]", " vs ", "$matches[awayteam]";?></td>
-                                <?php if ($matches[DaccaUnited] == $matches[opponent]) { ?>
-                                    <td class="p-3 text-success"><?php echo "$matches[DaccaUnited]", " - ", "$matches[opponent]";?></td>
-                                <?php } ?>
-                                <td class="p-3"><?php echo "$matches[DaccaUnited]", " - ", "$matches[opponent]";?></td>    
+                                <?php if ($matches['DaccaUnited'] > $matches['opponent']) { ?>
+                                    <td class="p-3 text-success"><?php echo "$matches[DaccaUnited]", " - ", "$matches[opponent]", " (W)";?></td>
+                                <?php }
+
+                                    else if ($matches['DaccaUnited'] < $matches['opponent']) { ?>
+                                    <td class="p-3 text-danger"><?php echo "$matches[DaccaUnited]", " - ", "$matches[opponent]", " (L)";?></td>
+                                <?php }
+
+                                else if ($matches['DaccaUnited'] == $matches['opponent']) { ?>
+                                    <td class="p-3 text-warning"><?php echo "$matches[DaccaUnited]", " - ", "$matches[opponent]", " (D)";?></td>
+                                <?php }
+
+                                ?>    
                             </tr>
                     <?php 
                     }

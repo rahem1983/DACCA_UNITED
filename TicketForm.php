@@ -28,6 +28,13 @@
     </div>
         <form action="Ticket_backend.php" class="w-50 m-auto was-validated">
             <div class="form-group pt-3 pb-3">
+            <label for="matchid"><h4>Match Number</h4></label>
+            <input type="text" class="form-control" name="matchid" required>
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Please Enter Match Number</div>
+            </div>
+
+            <div class="form-group pt-3 pb-3">
             <label for="name"><h4>Name</h4></label>
             <input type="text" class="form-control" name="name" required>
             <div class="valid-feedback">Valid</div>
