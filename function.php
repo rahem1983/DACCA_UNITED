@@ -44,3 +44,40 @@ function emailexist($connection, $email) {
 	// }
 	// return $result;
 }
+function ticketavailable($connection, $matchid){
+	$sql= 'SELECT MatchID FROM matches where (CURRENT_DATE < matches.date and hometeam = "Dacca United")ORDER BY matches.date';
+	$result = mysqli_query($connection, $sql);  
+	$temp = 0;            
+
+	while ($ticket = mysqli_fetch_array($result)) {
+		if ($ticket['MatchID']==$matchid) {
+			$temp=1;
+		}
+	}
+	if ($temp == 1) {
+		return true;
+	}
+	else{
+		return false;
+	}
+
+}
+
+
+function playeridexist($connection, $playerid) {
+	$sql = 'SELECT PlayerID FROM players ;';
+	$result = mysqli_query($connection, $sql);  
+	$temp = 0;            
+
+	while ($player = mysqli_fetch_array($result)) {
+		if ($player['PlayerID']==$playerid) {
+			$temp=1;
+		}
+	}
+	if ($temp == 1) {
+		return true;
+	}
+	else{
+		return false;
+	}
+}

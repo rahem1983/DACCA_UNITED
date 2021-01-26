@@ -46,7 +46,7 @@
     </thead>
     <tbody>
         <?php
-                    $sql= 'SELECT * FROM ticket INNER JOIN matches where (CURRENT_DATE < matches.date and hometeam = "Dacca United") ORDER BY matches.date';
+                    $sql= 'SELECT * FROM matches where (CURRENT_DATE < matches.date and hometeam = "Dacca United")ORDER BY matches.date';
                     $result = mysqli_query($connected, $sql); 
 
                         while ($ticket = mysqli_fetch_array($result)) {?>

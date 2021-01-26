@@ -19,17 +19,6 @@
               background-attachment: fixed;
         
         }
-    
-
-        .opes{
-
-            /* filter: alpha(opacity=50);
-            background-image:url(maroon.png); */
-            background-color: rgba(83, 0, 28, 0.8);
-            background-size: cover;
-            background-attachment: fixed;
-            
-        }
        
         </style>
 
@@ -39,23 +28,31 @@
     
     <div class="container-fluid back"> 
         <div class="row justify-content-center text-center pt-5 p-5 pb-4">
-        
+                    <div class="pt-5"></div>
+                    <div class="pt-5"></div>
 
                         <div class="col-lg-4 pt-5">
-                        <div class="card border-5 border-warning opes"> 
+                        <div class="card border-5 border-warning" style=" background-color: rgba(83, 0, 28, 0.8); background-size: cover; background-attachment: fixed;"> 
                         <div class="card-body">
-                        <h2 class="card-title text-white">Next Match</h2>
-                        <h5 class="card-title pb-4 text-success">BPL</h5>
-                        <h2 class="card-title text-warning">Dacca United</h2>
-                        <h5 class="card-title text-white">Vs</h5>
-                        <h2 class="card-title text-danger pb-2">Bashundhara Kings</h2>
-                        <h4 class="card-title pt-2 text-white">Time: 26 January, 2021. 7:00 PM</h4>
-                        <h4 class="card-title pb-3 text-white">North South Stadium</h4>
-                        <a class="class-link" target="_blank" href="Tickets.html">Tickets</a>
+                        <div class="pt-5"></div>
+                        <?php
+                        $sql= 'SELECT * FROM matches where (current_date < date) ORDER BY date LIMIT 1;';
+                        $result = mysqli_query($connected, $sql);
+                        while ($player = mysqli_fetch_array($result)) {?>
+                            <h2 class="card-title text-white">Next Match</h2>
+                            <h5 class="card-title pb-4 text-success"><?php echo "$player[competition]"; ?></h5>
+                            <h2 class="card-title text-warning"><?php echo "$player[hometeam]"; ?></h2>
+                            <h5 class="card-title text-primary">Vs</h5>
+                            <h2 class="card-title text-danger pb-2"><?php echo "$player[awayteam]"; ?></h2>
+                            <h4 class="card-title pt-2 text-primary"><?php echo "$player[date]"; ?></h4>
+                        <?php } ?>
+                        <div class="pt-5"></div>
                         </div>
                     </div>
     
                 </div>
+                <div class="pb-5"></div>
+                <div class="pt-5"></div>
     
         </div>  
 

@@ -1,9 +1,6 @@
 <?php 
     include ('header.php');
     require ('DB_connection.php');
-    if (isset($_POST['buyticket'])) {
-    $name = $_POST[''];
-  }
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,9 +23,9 @@
     <div class="title text-center mb-3">
         <h3 class= "font-weight bolder">Ticket Form</h3>
     </div>
-        <form action="Ticket_backend.php" class="w-50 m-auto was-validated">
+        <form action="Ticket_backend.php" class="w-50 m-auto was-validated" method="post">
             <div class="form-group pt-3 pb-3">
-            <label for="matchid"><h4>Match Number</h4></label>
+            <label for="matches"><h4>Match Number</h4></label>
             <input type="text" class="form-control" name="matchid" required>
             <div class="valid-feedback">Valid</div>
             <div class="invalid-feedback">Please Enter Match Number</div>
@@ -81,7 +78,7 @@
 
              <div class="form-group pt-3 text-center">
 
-                <button type="buy" class= "btn btn-warning " name="buynow" value="Buy Now">Buy Now</button>
+                <button type="submit" class= "btn btn-warning " name="buynow">Buy Now</button>
              </div>
         </form>
         

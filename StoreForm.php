@@ -26,10 +26,10 @@
         <h3 class= "font-weight bolder pt-5">Order Form</h3>
     </div>
  
-    <form action="" class="w-50 m-auto was-validated">
+    <form action="store_backend.php" class="w-50 m-auto was-validated" method="post">
         <div class="form-group pt-3">
-        <label for="fullname">Name</label>
-        <input type="text" class="form-control" name="fullname" required>
+        <label for="name">Name</label>
+        <input type="text" class="form-control" name="name" required>
         <div class="valid-feedback">Valid</div>
         <div class="invalid-feedback">Please Enter your Name</div>
         </div>
@@ -51,30 +51,30 @@
         <div class="form-row pt-3">
             <div class="form-group col-md-12">
               <label for="inputCity">Country</label>
-              <input type="text" class="form-control" id="inputCity" required>
+              <input type="text" class="form-control" name="country" required>
               <div class="valid-feedback">Valid</div>
               <div class="invalid-feedback">*required</div>
             </div>
           </div>
         <div class="form-row pt-3">
             <div class="form-group col-md-12">
-              <label for="inputCity">City</label>
-              <input type="text" class="form-control" id="inputCity" required>
+              <label for="city">City</label>
+              <input type="text" class="form-control" name="city" required>
               <div class="valid-feedback">Valid</div>
               <div class="invalid-feedback">*required</div>
             </div>
          </div>
             <div class="form-row pt-3">
                 <div class="form-group col-md-12">
-                  <label for="inputCity">Division</label>
-                  <input type="text" class="form-control" id="inputCity" required>
+                  <label for="division">Division</label>
+                  <input type="text" class="form-control" name="division" required>
                   <div class="valid-feedback">Valid</div>
                   <div class="invalid-feedback">*required</div>
                 </div>
 </div>
       <div class="form-group pt-3">
         <label for="inputAddress2">Detailed Address</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Area Name, House/Apartment Name, Number and Floor, Postal Code" required>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Area Name, House/Apartment Name, Number and Floor, Postal Code" required>
         <div class="valid-feedback">Valid</div>
         <div class="invalid-feedback">*required</div>
       </div>

@@ -61,6 +61,9 @@ mysqli_stmt_bind_param($stmt, "ssss",$email, $name, $hashedpass,  $phone);
 mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 
+session_start();
+$_SESSION['email'] = $email;
+
 header("location: index.php");
 exit();
 

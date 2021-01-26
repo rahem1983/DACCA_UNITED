@@ -57,7 +57,7 @@ body{
                     
                     <input type="password" class="form-control" name="password" placeholder="password" required>
                     <div class="valid-feedback"><h6 class="font-weight bolder">Valid</h6></div>
-                    <div class="invalid-feedback"><h6 class="font-weight bolder">Please Enter a passwerd using (0-9)</h6></div>
+                    <div class="invalid-feedback"><h6 class="font-weight bolder">Please Enter a passwerd using </h6></div>
                 </div>
                 
                 <div class="form-group pb-4">
@@ -83,7 +83,7 @@ body{
                             echo 'Passward does not match!!!';
                         }
                         elseif ($_GET["error"]== "emailexist") {
-                            echo 'Fan id allready exist!!!';
+                            echo 'Email id allready exist!!!';
                         }
                     }
 

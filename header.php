@@ -39,9 +39,15 @@
                     <li class="nav-item"><a class="nav-link" href="Tickets.php">Ticket</a></li>
                     <li class="nav-item"><a class="nav-link" href="store.php">Store</a></li>
                     <?php
-                        if (isset($_SESSION["email"])){     
-                            echo '<li class="nav-item"><a class="nav-link" href="profile.php">Profile</a></li>';
-                            echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
+                        if (isset($_SESSION['email'])){
+                            if ($_SESSION['email'] == "daccaunited.admin@gmail.com") {
+                                echo '<li class="nav-item"><a class="nav-link" href="admin.php">Admin</a></li>';
+                                echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
+                                
+                              }  
+                            else{
+                                echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
+                            }  
                         }
                         else{
                             echo '<li class="nav-item"><a class="nav-link" href="signup.php">Signup</a></li>';

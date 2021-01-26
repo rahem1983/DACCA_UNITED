@@ -52,7 +52,7 @@
     <div class="container-fluid  text-center">
         <div >
             <div class="row pb-5">
-                <div class="col-lg-12"><a class="btn btn-outline-warning" href="TicketForm.php">Shop now</a>    
+                <div class="col-lg-12"><a class="btn btn-outline-warning" href="StoreForm.php">Shop now</a>    
                 </div>
             </div>
 

@@ -27,8 +27,7 @@
 	}
 	else if ($checkpassword == true) {
 		session_start();
-		$_SESSION["email"] = $emailexist["email"];
-		$_SESSION["name"] = $useridexist["name"];
+		$_SESSION['email'] = $email;
 		header("location: index.php");
  		exit();
 	}
