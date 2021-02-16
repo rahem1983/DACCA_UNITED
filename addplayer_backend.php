@@ -30,10 +30,18 @@
 			mysqli_stmt_execute($stmt);
 			mysqli_stmt_close($stmt);
 
+			header("location: admin.php");
+			exit();
 
-			$sql = "SELECT PlayerID FROM `players` WHERE `name`= $name and `jerseyNo` = $jerseyno ;";
-					$result = mysqli_query($connected, $sql);
-					$player = mysqli_fetch_array($result);
+
+			// $sql = "SELECT * FROM `players` WHERE `name`= $name and `jerseyNo` = $jerseyno ;";
+			// 		$result = mysqli_query($connected, $sql);
+			// 		//$player = mysqli_fetch_array($result);
+
+			// 		while ($player = mysqli_fetch_array($result)) {
+			// 					echo "$player[PlayerID]";
+			// 			}					
+
 			// $sql2 = "SELECT `PlayerID` FROM `players` WHERE (`name` = $name and `jerseyNo` = $jerseyno);";
 			// $quer = mysqli_query($connected, $sql2);
 			// echo gettype('$quer');

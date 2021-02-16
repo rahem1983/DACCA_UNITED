@@ -81,3 +81,39 @@ function playeridexist($connection, $playerid) {
 		return false;
 	}
 }
+
+function productidexist($connection, $productid) {
+	$sql = 'SELECT productID FROM product ;';
+	$result = mysqli_query($connection, $sql);  
+	$temp = 0;            
+
+	while ($player = mysqli_fetch_array($result)) {
+		if ($player['productID']==$productid) {
+			$temp=1;
+		}
+	}
+	if ($temp == 1) {
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
+function customeremailexist($connection, $email) {
+	$sql = 'SELECT email FROM customer ;';
+	$result = mysqli_query($connection, $sql);  
+	$temp = 0; 
+
+	while ($player = mysqli_fetch_array($result)) {
+		if ($player['email']==$email) {
+			$temp=1;
+		}
+	}
+	if ($temp == 1) {
+		return true;
+	}
+	else{
+		return false;
+	}
+}

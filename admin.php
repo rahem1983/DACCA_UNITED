@@ -439,32 +439,16 @@
     <div class="col-lg-6">
         <div class="card bg-white border-2">
             <div class="card-body">
+
                 <h3 class="card-title text-center pb-3">Products Sold</h3>
-                <h5 class="card-title py-1"><u>Catergory: Kits</u></h5>
-                <h5 class="card-title">Total Quantity Sold: 127784</h5>
-                <h5 class="card-title">Total Amount Earned: TK. 18 Million </h5>
-
-                <h5 class="card-title py-1"><u>Catergory: Masks</u></h5>
-                <h5 class="card-title">Total Quantity Sold: 96443</h5>
-                <h5 class="card-title">Total Amount Earned: TK. 100 billion </h5>
-
-                <h5 class="card-title py-1"><u>Catergory: Boots</u></h5>
-                <h5 class="card-title">Total Quantity Sold: </h5>
-                <h5 class="card-title">Total Amount Earned: TK. 100 billion </h5>
-                
-                <h5 class="card-title py-1"><u>Catergory: Footballs</u></h5>
-                <h5 class="card-title">Total Quantity Sold: 100</h5>
-                <h5 class="card-title">Total Amount Earned: TK. 100 billion </h5>
-
-                <h5 class="card-title py-1"><u>Catergory: Socks</u></h5>
-                <h5 class="card-title">Total Quantity Sold: 100</h5>
-                <h5 class="card-title">Total Amount Earned: TK. 100 billion </h5>
-
-                <h5 class="card-title py-1"><u>Catergory: Gloves</u></h5>
-                <h5 class="card-title">Total Quantity Sold: 100</h5>
-                <h5 class="card-title">Total Amount Earned: TK. 100 billion </h5>
-
-                
+                <?php
+                $sql= 'SELECT product.category AS category,SUM(sells.quantity) AS quantity,SUM(sells.total) AS total FROM sells,product WHERE product.productID=sells.ProductId GROUP BY product.category;';       
+                $result = mysqli_query($connected, $sql);                      
+                while ($sell = mysqli_fetch_array($result)) {?>  
+                    <h5 class="card-title py-1"><u><?php echo "Catergory: $sell[category]";?></u></h5>
+                    <h5 class="card-title"><?php echo "Total Quantity Sold: $sell[quantity]";?></h5>
+                    <h5 class="card-title"><?php echo "Total Amount Earned: TK. $sell[total]";?></h5>
+                 <?php } ?>
                 
             </div>
     </div>
@@ -474,29 +458,17 @@
         <div class="card bg-white border-2">
             <div class="card-body">
                 <h3 class="card-title text-center pb-3">Tickets Sold</h3>
-                <h5 class="card-title py-1"><u>Catergory: VIP </u></h5>
-                <h5 class="card-title">Total Tickets Sold: 127784</h5>
-                <h5 class="card-title">Total Amount Earned: TK. 18 Million </h5>
 
-                <h5 class="card-title py-1"><u>Catergory: First Class</u></h5>
-                <h5 class="card-title">Total Tickets Sold: 96443</h5>
-                <h5 class="card-title">Total Amount Earned: TK. 100 billion </h5>
+                <?php
+                $sql= 'SELECT COUNT(*) AS COUNT,category,SUM(price) AS price FROM ticket GROUP BY category';       
+                $result = mysqli_query($connected, $sql);                      
+                while ($ticket = mysqli_fetch_array($result)) {?>  
+                    <h5 class="card-title py-1"><u><?php echo "Catergory: $ticket[category]";?></u></h5>
+                    <h5 class="card-title"><?php echo "Total Tickets Sold: $ticket[COUNT]";?></h5>
+                    <h5 class="card-title"><?php echo "Total Amount Earned: TK. $ticket[price]";?></h5>
+                 <?php } ?>
 
-                <h5 class="card-title py-1"><u>Catergory: North Stand</u></h5>
-                <h5 class="card-title">Total Tickets Sold: </h5>
-                <h5 class="card-title">Total Amount Earned: TK. 100 billion </h5>
                 
-                <h5 class="card-title py-1"><u>Catergory: South Stand</u></h5>
-                <h5 class="card-title">Total Tickets Sold: 100</h5>
-                <h5 class="card-title">Total Amount Earned: TK. 100 billion </h5>
-
-                <h5 class="card-title py-1"><u>Catergory: Eastern Gallery</u></h5>
-                <h5 class="card-title">Total Tickets Sold: 100</h5>
-                <h5 class="card-title">Total Amount Earned: TK. 100 billion </h5>
-
-                <h5 class="card-title py-1"><u>Catergory: Western Gallery</u></h5>
-                <h5 class="card-title">Total Tickets Sold: 100</h5>
-                <h5 class="card-title">Total Amount Earned: TK. 100 billion </h5>
                 
             </div>
     </div>
@@ -508,38 +480,22 @@
     <div class="col-lg-8">
         <div class="card bg-white border-3">
             <div class="card-body">
-                <h2 class="card-title text-center pb-3"> <u>Grand Total</u> </h2>
-                <h3 class="card-title py-1 text-center"> 9375 Million Taka Only</h3>
-               
+                <?php
+                $sql= 'SELECT SUM(sells.total)+SUM(ticket.price) AS price FROM sells,ticket';       
+                $result = mysqli_query($connected, $sql);                      
+                while ($total = mysqli_fetch_array($result)) {?>  
+                    <h2 class="card-title text-center pb-3"> <u>Grand Total</u> </h2>
+                    <h3 class="card-title py-1 text-center"> <?php echo "$total[price] Taka Only";?></h3>
+                 <?php } ?>
                 
             </div>
     </div>
 
     </div>
 
-
 </div>
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>  
-
-
 
 </div>
     

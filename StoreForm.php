@@ -27,12 +27,19 @@
     </div>
  
     <form action="store_backend.php" class="w-50 m-auto was-validated" method="post">
-        <div class="form-group pt-3">
+      <div class="form-group pt-3">
+        <label for="productid">ProductID</label>
+        <input type="text" class="form-control" name="productid" required>
+        <div class="valid-feedback">Valid</div>
+        <div class="invalid-feedback">Please Enter the product id</div>
+        </div>
+
+<!--         <div class="form-group pt-3">
         <label for="name">Name</label>
         <input type="text" class="form-control" name="name" required>
         <div class="valid-feedback">Valid</div>
         <div class="invalid-feedback">Please Enter your Name</div>
-        </div>
+        </div> -->
 
         <div class="form-group pt-3">
         <label for="email">Email</label>
@@ -41,51 +48,49 @@
         <div class="invalid-feedback">Please Enter your email</div>
         </div>
        
-        <div class="form-group pt-3">
+<!--         <div class="form-group pt-3">
         <label for="phone">Phone No.</label>
         <input type="text" class="form-control" name="phone" required>
         <div class="valid-feedback">Valid</div>
         <div class="invalid-feedback">Please Enter your Phone Number</div>
-        </div>
+        </div> -->
 
-        <div class="form-row pt-3">
+<!--         <div class="form-row pt-3">
             <div class="form-group col-md-12">
-              <label for="inputCity">Country</label>
+              <label for="country">Country</label>
               <input type="text" class="form-control" name="country" required>
               <div class="valid-feedback">Valid</div>
               <div class="invalid-feedback">*required</div>
             </div>
-          </div>
-        <div class="form-row pt-3">
+          </div> -->
+<!--         <div class="form-row pt-3">
             <div class="form-group col-md-12">
               <label for="city">City</label>
               <input type="text" class="form-control" name="city" required>
               <div class="valid-feedback">Valid</div>
               <div class="invalid-feedback">*required</div>
             </div>
-         </div>
-            <div class="form-row pt-3">
+         </div> -->
+<!--             <div class="form-row pt-3">
                 <div class="form-group col-md-12">
                   <label for="division">Division</label>
                   <input type="text" class="form-control" name="division" required>
                   <div class="valid-feedback">Valid</div>
                   <div class="invalid-feedback">*required</div>
                 </div>
-</div>
-      <div class="form-group pt-3">
-        <label for="inputAddress2">Detailed Address</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="Area Name, House/Apartment Name, Number and Floor, Postal Code" required>
+</div> -->
+<!--       <div class="form-group pt-3">
+        <label for="inputAddress">Detailed Address</label>
+        <input type="text" class="form-control" name="inputAddress" placeholder="Area Name, House/Apartment Name, Number and Floor, Postal Code" required>
         <div class="valid-feedback">Valid</div>
         <div class="invalid-feedback">*required</div>
-      </div>
-   
-
-    <div class="py-3">Product ID:</div>
+      </div> -->
+  
    
     <div class="form-row pt-3">
         <div class="form-group col-md-2">
         <label for="quantity">Quantity</label>
-        <input type="number" min="1" class="form-control text-center" max="17" value="1" id="quantity">
+        <input type="number" min="1" class="form-control text-center" max="17" value="1" name="quantity">
         </div>
     </div>
         
@@ -105,11 +110,15 @@
       </div>
 
      <div class="form-group pt-3 text-center">
-      <div class="text-center pt-3"><button type="submit" class="btn btn-warning"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+      <div class="text-center pt-3"><button type="submit" class="btn btn-warning" name="submit"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
         <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
       </svg> Order Now</button></div>
     </div>
     </form>
+    <div class="pt-5"></div>
+    <div class="pt-5"></div>
+    <div class="pt-5"></div>
+    <div class="pt-5"></div>
 </div>
  <?php 
     include 'footer.php';

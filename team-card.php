@@ -45,13 +45,14 @@
                                         <h5 class="card-title">Age : <?php echo " $player[age] "; ?> </h5>
                                         <h5 class="card-title">Jersey Number : <?php echo " $player[jerseyNo] "; ?> </h5>
                                         <h5 class="card-title">Salary : ৳ <?php echo " $player[salary] "; ?> </h5>
-                                    </div>
+                                </div>
                             </div>
-                     </div>
+                    </div>
                 <?php } ?>
             </div>
 
         </div>
+        
     </div>
 
 
@@ -97,7 +98,7 @@
         <div class="container ">
         <div class="row mt-4">
         <?php
-            $sql= 'SELECT * FROM players WHERE position="Midfielder";';       
+            $sql= 'SELECT * FROM players,player_stats WHERE players.PlayerID=player_stats.PlayerID AND players.position="Midfielder" ORDER BY player_stats.assist DESC;';       
             $result = mysqli_query($connected, $sql);                      
             while ($player = mysqli_fetch_array($result)) {?>  
             <div class="col-lg-4 pb-4">
@@ -129,7 +130,7 @@
         <div class="container ">
         <div class="row mt-4">
         <?php
-            $sql= 'SELECT * FROM players WHERE position="Forward";';       
+            $sql= 'SELECT * FROM players,player_stats WHERE players.PlayerID=player_stats.PlayerID AND players.position="Forward" ORDER BY player_stats.goal DESC';       
             $result = mysqli_query($connected, $sql);                      
             while ($player = mysqli_fetch_array($result)) {?>  
             <div class="col-lg-4 pb-4">
